@@ -4,12 +4,15 @@ var screenshots_folder = "res://assets/screenshots/"
 var images_folder = "res://assets/emojis"
 var image_files = []
 @onready var node_2d = $"."
+var viewport_size = Vector2(1000, 1000)
 
 func _ready():
 	get_files_from_folder(images_folder)
 	
-	#for l in range(50):
-		#await generate_image(l)
+	get_viewport().set_size(viewport_size)
+	
+	for l in range(50):
+		await generate_image(l)
 
 func get_files_from_folder(path):
 	var dir = DirAccess.open(path)
@@ -28,8 +31,8 @@ func get_random_image():
 	return load(image_files[random_index])
 
 func randomize_sprite(sprite):
-	sprite.position.x = randi() % 1152 - 576
-	sprite.position.y = randi() % 648 - 324
+	sprite.position.x = randi() % 1000 - 500
+	sprite.position.y = randi() % 1000 - 500
 	sprite.scale = Vector2(1,1) * randf() * 2 
 	sprite.rotation = randf() * 360
 
