@@ -11,4 +11,5 @@ config_version=5
 [application]
 
 config/name="emojIA"
+run/main_scene="res://scenes/generated_image.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
