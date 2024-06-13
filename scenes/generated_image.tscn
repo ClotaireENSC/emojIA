@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://scripts/Node2D.gd" id="1_xhmdv"]
 
 [node name="Node2D" type="Node2D"]
+visible = false
 script = ExtResource("1_xhmdv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
