@@ -17,8 +17,8 @@ func _ready():
 		await get_tree().process_frame
 	
 	for k in range(100):
-		print(get_children().size())
-		print(get_children()[0].get_children().size())
+		#print(get_children().size())
+		#print(get_children()[0].get_children().size())
 		
 		print("\n=== Enregistrement des images ...")
 		
